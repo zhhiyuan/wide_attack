@@ -143,7 +143,7 @@ def test_acc():
 
 def train_adv_PGD():
     '''
-    使用PGD的生成样本进行训练
+    使用PGD的生成样本重新开始进行随机初始化训练
     :return:
     '''
 
@@ -217,6 +217,52 @@ def train_adv_PGD():
             correct = np.sum((t.argmax(test_score.to('cpu'), 1) == test_y).numpy())
             print('accuracy: {} '.format(round(correct/test_y.size(0),4)))
             break
+
+def attack_PGD():
+    '''
+    对使用真实样本和对抗样本训练的模型进行攻击
+    :return:
+    '''
+    # 1.加载配置
+    opt = Config()
+    opt._parese()
+    global DOWNLOAD_CIFAR
+    if not (os.path.exists('./data/CIFAR/')) or not os.listdir('./data/CIFAR/'):
+        DOWNLOAD_CIFAR = True
+    # 1a.加载模型
+    model = getattr(models, opt.model)()
+    if opt.model_path:
+        model.load(opt.model_path)
+    model.to(opt.device).eval()
+    # 2.加载数据
+    transform = tv.transforms.Compose([
+        tv.transforms.ToTensor(),
+        tv.transforms.Normalize(mean=opt.MEAN, std=opt.STD)
+    ])
+    test_data = tv.datasets.CIFAR10(
+        root='./data/CIFAR/',
+        train=False,
+        transform=transform,
+        download=DOWNLOAD_CIFAR
+    )
+    test_loader = DataLoader(test_data, batch_size=1, shuffle=True)
+    success_num = 0
+    attack = LinfPGDAttack(model)
+    for ii, (data, label) in enumerate(test_loader):
+        if ii >= opt.test_num:
+            break
+        test_score = model(data.to(opt.device))
+        if t.argmax(test_score.to('cpu'), 1) == label.to('cpu'):
+            continue
+        perturb_x = attack.perturb(data.numpy(), label)
+        test_score = model(t.FloatTensor(perturb_x).to(opt.device))
+        if t.argmax(test_score.to('cpu'), 1) != label:
+            success_num += 1
+    success_rate = success_num / ii
+    accuracy = test_acc()
+    accuracy_after = accuracy * (1 - success_rate)
+    string = '{} , {} , {} , {} \n'.format(opt.model_path, accuracy, accuracy_after, success_rate)
+    open('log.csv', 'a').write(string)
 
 
 if __name__ == '__main__':

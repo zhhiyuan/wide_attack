@@ -36,4 +36,6 @@ epsilon=0.3, k=40, a=0.01
 
 - 分为train()和train_adv_PGD()函数，train()作用是使用真实数据集训练并将模型保存在ckps文件夹下；train_adv_PGD()用于读取预训练模型并生成对抗样本，样本放入相同的新的随机初始化模型上训练
 
-目前只测试过notebook版本
+- 训练完成后测试其对抗性，使用attack_PGD()函数，预训练模型放入config中的model_path中
+
+- 目前只测试过notebook版本
