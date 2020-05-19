@@ -1,12 +1,16 @@
-import torch
+from torchvision.models import shufflenet_v2_x2_0
 from torch import nn
-
+import torch
+import torch.nn.functional as F
 from models.basic_module import BasicModule
-
+#[3, 7, 3], [24, 500, 1000, 2000, 4096]x4
+#[3, 7, 3], [24, 244, 488, 976, 2048]x2
+#[3, 7, 3], [24, 116, 232, 464, 1024]x1
 class ShuffleNetV2(BasicModule):
-    def __init__(self, stages_repeats=[4, 8, 4], stages_out_channels=[24, 116, 232, 464, 1024], num_classes=10):
+    def __init__(self, stages_repeats=[3, 7, 3], stages_out_channels=[24, 116, 232, 464, 1024], num_classes=10):
         super(ShuffleNetV2, self).__init__()
         self.model_name = 'ShuffleNetV2'
+
         if len(stages_repeats) != 3:
             raise ValueError('expected stages_repeats as list of 3 positive ints')
         if len(stages_out_channels) != 5:
@@ -16,13 +20,13 @@ class ShuffleNetV2(BasicModule):
         input_channels = 3
         output_channels = self._stage_out_channels[0]
         self.conv1 = nn.Sequential(
-            nn.Conv2d(input_channels, output_channels, 3, 2, 1, bias=False),
+            nn.Conv2d(input_channels, output_channels, 3, 1, 1, bias=False),
             nn.BatchNorm2d(output_channels),
-            nn.ReLU(inplace=True),
+            nn.ReLU(inplace=True)
         )
         input_channels = output_channels
 
-        self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
+        #self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
 
         stage_names = ['stage{}'.format(i) for i in [2, 3, 4]]
         for name, repeats, output_channels in zip(
@@ -44,12 +48,13 @@ class ShuffleNetV2(BasicModule):
 
     def forward(self, x):
         x = self.conv1(x)
-        x = self.maxpool(x)
+        #x = self.maxpool(x)
         x = self.stage2(x)
         x = self.stage3(x)
         x = self.stage4(x)
         x = self.conv5(x)
-        x = x.mean([2, 3])  # globalpool
+        x = F.avg_pool2d(x, 4)
+        x = x.view(x.size(0), -1)
         x = self.fc(x)
         return x
 
@@ -116,5 +121,4 @@ def channel_shuffle(x, groups):
     x = x.view(batchsize, -1, height, width)
 
     return x
-
 

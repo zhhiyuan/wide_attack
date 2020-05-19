@@ -20,6 +20,7 @@ if not (os.path.exists('../data/CIFAR/')) or not os.listdir('../data/CIFAR/'):
     DOWNLOAD_CIFAR = True
 
 transform = tv.transforms.Compose([
+    tv.transforms.Resize(224),
     # 要先完成所有操作，然后totensor，normalize
     tv.transforms.ToTensor(),
     tv.transforms.Normalize(mean=(0.4914, 0.4822, 0.4465),std=(0.2023, 0.1994, 0.2010))
@@ -31,7 +32,7 @@ train_data = tv.datasets.CIFAR10(
     )
 
 dl = DataLoader( dataset=train_data,
-        batch_size=4,
+        batch_size=1,
         shuffle=True,
         num_workers=0)
 for ii, (data, label) in enumerate(dl):

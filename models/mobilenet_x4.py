@@ -2,18 +2,19 @@
 from torch import nn
 
 from models.basic_module import BasicModule
+import torch.nn.functional as F
 
 class MobileNetV2_x4(BasicModule):
     def __init__(self, num_classes=10, width_mult=4.0):
         super(MobileNetV2_x4, self).__init__()
-        self.model_name ='MobileNetV2_x4'
+        self.model_name = 'MobileNetV2_x4'
         block = InvertedResidual
         input_channel = 32
         last_channel = 1280
         inverted_residual_setting = [
             # t, c, n, s
             [1, 16, 1, 1],
-            [6, 24, 2, 2],
+            [6, 24, 2, 1],
             [6, 32, 3, 2],
             [6, 64, 4, 2],
             [6, 96, 3, 1],
@@ -24,7 +25,7 @@ class MobileNetV2_x4(BasicModule):
         # building first layer
         input_channel = int(input_channel * width_mult)
         self.last_channel = int(last_channel * max(1.0, width_mult))
-        features = [ConvBNReLU(3, input_channel, stride=2)]
+        features = [ConvBNReLU(3, input_channel, stride=1)]
         # building inverted residual blocks
         for t, c, n, s in inverted_residual_setting:
             output_channel = int(c * width_mult)
@@ -58,7 +59,8 @@ class MobileNetV2_x4(BasicModule):
 
     def forward(self, x):
         x = self.features(x)
-        x = x.mean([2, 3])
+        x = F.avg_pool2d(x,4)
+        x = x.view(x.size(0),-1)
         x = self.classifier(x)
         return x
 

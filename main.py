@@ -9,6 +9,7 @@ from torch import nn
 from torch.optim import Adam
 import tqdm
 
+
 import models
 from attack.PGDAttack import LinfPGDAttack
 from config import Config
@@ -42,6 +43,7 @@ def train():
         DOWNLOAD_CIFAR =True
 
     transform = tv.transforms.Compose([
+        tv.transforms.Resize(224),
         #要先完成所有操作，然后totensor，normalize
         tv.transforms.ToTensor(),
         tv.transforms.Normalize(mean=opt.MEAN, std=opt.STD)
@@ -113,6 +115,7 @@ def test_acc():
 
     # 2.加载数据
     transform = tv.transforms.Compose([
+        tv.transforms.Resize(224),
         tv.transforms.ToTensor(),
         tv.transforms.Normalize(mean=opt.MEAN, std=opt.STD)
 
@@ -166,6 +169,7 @@ def train_adv_PGD():
 
     # 3.加载数据
     transform = tv.transforms.Compose([
+        tv.transforms.Resize(224),
         tv.transforms.ToTensor(),
         tv.transforms.Normalize(mean=opt.MEAN,std= opt.STD)
     ])
@@ -236,6 +240,7 @@ def attack_PGD():
     model.to(opt.device).eval()
     # 2.加载数据
     transform = tv.transforms.Compose([
+        tv.transforms.Resize(224),
         tv.transforms.ToTensor(),
         tv.transforms.Normalize(mean=opt.MEAN, std=opt.STD)
     ])
@@ -266,4 +271,4 @@ def attack_PGD():
 
 
 if __name__ == '__main__':
-   train_adv_PGD()
+   train()
