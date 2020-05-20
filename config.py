@@ -1,7 +1,7 @@
 import torch as t
 class Config:
     model_path = None# 预训练模型，None表示重新训练
-    model = 'ShuffleNetV2'#加载的模型，模型名必须与models/__init__.py中的名字一致
+    model = 'SqueezeNet1_1'#加载的模型，模型名必须与models/__init__.py中的名字一致
     epsilon = 0.3   #PGD攻击中的干扰参数
     '''
     ShuffleNetV2, ShuffleNetV2_x2, 

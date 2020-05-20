@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="1a0f3015-ef99-4d54-be6b-5475aa1314ca" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="1a0f3015-ef99-4d54-be6b-5475aa1314ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
+>>>>>>> parent of 096be8a... 更新了模型
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,58 +38,6 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.test_model">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="wide_attack" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="wide_attack" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/test_model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.test_model" />
-        <item itemvalue="Python.main" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -92,6 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589361077441</updated>
       <workItem from="1589361078950" duration="1069000" />
+<<<<<<< HEAD
       <workItem from="1589506676884" duration="2754000" />
       <workItem from="1589529704376" duration="40000" />
       <workItem from="1589612230925" duration="1676000" />
@@ -108,83 +66,19 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1589508786345</updated>
+=======
+      <workItem from="1589506676884" duration="1840000" />
+>>>>>>> parent of 096be8a... 更新了模型
     </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新了攻击" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了攻击" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="201" key="#Notifications" timestamp="1589509012679">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="552" y="201" key="#Notifications/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1589509012679" />
-    <state x="572" y="132" key="CommitChangelistDialog2" timestamp="1589508785045">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="572" y="132" key="CommitChangelistDialog2/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1589508785045" />
-    <state width="1493" height="283" key="GridCell.Tab.0.bottom" timestamp="1589721458022">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458022" />
-    <state width="1493" height="283" key="GridCell.Tab.0.center" timestamp="1589721458022">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458022" />
-    <state width="1493" height="283" key="GridCell.Tab.0.left" timestamp="1589721458022">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458022" />
-    <state width="1493" height="283" key="GridCell.Tab.0.right" timestamp="1589721458022">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458022" />
-    <state width="1493" height="283" key="GridCell.Tab.1.bottom" timestamp="1589721458023">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.1.bottom/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458023" />
-    <state width="1493" height="283" key="GridCell.Tab.1.center" timestamp="1589721458023">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.1.center/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458023" />
-    <state width="1493" height="283" key="GridCell.Tab.1.left" timestamp="1589721458023">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.1.left/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458023" />
-    <state width="1493" height="283" key="GridCell.Tab.1.right" timestamp="1589721458023">
-      <screen x="-1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="1493" height="283" key="GridCell.Tab.1.right/-1920.0.1536.864/0.0.1920.1080@-1920.0.1536.864" timestamp="1589721458023" />
     <state x="463" y="184" key="SettingsEditor" timestamp="1589361239529">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="463" y="184" key="SettingsEditor/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1589361239529" />
-    <state x="552" y="275" key="Vcs.Push.Dialog.v2" timestamp="1589509005102">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="552" y="275" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1589509005102" />
-    <state x="754" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589508949156">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="754" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.864/0.0.1920.1080@0.0.1920.1080" timestamp="1589508949156" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/wide_attack$main.coverage" NAME="main Coverage Results" MODIFIED="1589719750553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/wide_attack$test_model.coverage" NAME="test_model Coverage Results" MODIFIED="1589720183007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
 </project>
