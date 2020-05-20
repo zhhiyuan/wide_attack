@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a0f3015-ef99-4d54-be6b-5475aa1314ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/mobilenet.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/mobilenet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/mobilenet_x2.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/mobilenet_x2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/mobilenet_x4.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/mobilenet_x4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/shufflenet_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/shufflenet_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/shufflenet_v2_x2.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/shufflenet_v2_x2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/shufflenet_v2_x4.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/shufflenet_v2_x4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test_model.py" afterDir="false" />
-    </list>
+    <list default="true" id="1a0f3015-ef99-4d54-be6b-5475aa1314ca" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +100,7 @@
       <workItem from="1589689184533" duration="502000" />
       <workItem from="1589690663068" duration="226000" />
       <workItem from="1589719452215" duration="1362000" />
-      <workItem from="1589861677971" duration="4104000" />
+      <workItem from="1589861677971" duration="4755000" />
     </task>
     <task id="LOCAL-00001" summary="更新了攻击">
       <created>1589508786345</created>
